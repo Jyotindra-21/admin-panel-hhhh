@@ -1,0 +1,72 @@
+.AddMenuItemContainer {
+    width: 100%;
+  }
+  .uploadContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .ImageUploadIcon {
+    height: 100px !important;
+    width: 100px !important;
+    border: 1px solid var(--text-lightGray);
+    color: var(--text-black);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .uploadBox {
+    width: 60vmin;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .imageBox{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid gray;
+    aspect-ratio: 2/1.5;
+    border-radius: 10px;
+  }
+
+  .imageBox > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Manage menu item */
+  .ManageContainer {
+    width: 100%;
+    border: 1px solid var(--text-lightGray);
+    padding: 20px;
+  }
+  
+  /* Responsive */
+  
+  @media only screen and (max-width: 600px) {
+    .ManageContainer {
+      width: 100%;
+      padding: 5px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .uploadBox {
+      width: 100%;
+      height: 100%;
+    }
+    .ImageUploadIcon {
+      height: 80px !important;
+      width: 80px !important;
+    }
+  }
+  

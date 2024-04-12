@@ -1,0 +1,93 @@
+.Faq_Main {
+  width: 100%;
+}
+
+.Control_form {
+  display: flex;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.faq_container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Control_form .form_label {
+  flex: 0.4;
+}
+
+.Control_form .form_input,
+.Control_form .form_select {
+  flex: 1;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+.Or_ {
+  text-align: center;
+  margin: 0;
+}
+
+.Button_add {
+  width: 80%;
+  margin-top: 20px;
+}
+
+/* MANAGE */
+.FAQ_Card {
+  border: 2px solid var(--text-lightGray);
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.Card_content {
+  flex: 1;
+}
+.Card_content h3 {
+  color: gray;
+  text-align: justify;
+  font-weight: 500;
+}
+.Card_content h3 span {
+  color: var(--text-black);
+  font-weight: bold;
+}
+.Card_action {
+  display: flex;
+  gap: 20px;
+  /* width: 20%; */
+}
+
+@media only screen and (max-width: 768px) {
+  .Control_form {
+    width: 100%;
+  }
+
+  /* Manage */
+  .FAQ_Card {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .Control_form {
+    flex-direction: column;
+  }
+  .Control_form .form_label,
+  .Control_form .form_input,
+  .Control_form .form_select {
+    width: 100%;
+  }
+  .Button_add {
+    width: 50%;
+  }
+
+  /* Manage */
+  .FAQ_Card {
+    flex-direction: column;
+  }
+}

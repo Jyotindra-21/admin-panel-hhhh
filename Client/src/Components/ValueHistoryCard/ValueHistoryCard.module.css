@@ -1,0 +1,39 @@
+.textarea_filed {
+  padding: 10px;
+  font-size: large;
+  width: 100%;
+  border-radius: 5px;
+}
+.cardImage {
+  padding: 10px;
+  width: 40%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.Value_History_Card {
+  display: flex;
+  width: 100%;
+  box-shadow: inherit;
+}
+.Card_content{
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .Value_History_Card , .Card_content{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .cardImage {
+    width: 100%;
+  }
+  .Value_History_Card {
+    flex-direction: column;
+  }
+}

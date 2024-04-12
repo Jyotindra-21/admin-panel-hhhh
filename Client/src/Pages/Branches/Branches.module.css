@@ -1,0 +1,98 @@
+.BranchesContainer {
+  width: 100%;
+}
+.FormContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.FormContainer form {
+  width: 100%;
+}
+.form_control {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  justify-content: start;
+  align-items: center;
+}
+.form_control_sub {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+.form_label {
+  width: 30%;
+}
+
+.form_control_sub .form_input {
+  width: 70%;
+  /* flex: 1; */
+}
+.form_input {
+  width: 80%;
+}
+.form_input input,
+.form_input textarea,
+.form_input select {
+  width: 100%;
+  padding: 10px;
+  font-size: medium;
+  border-radius: 5px;
+}
+.form_input textarea {
+  font-size: large;
+}
+
+/* Manage Branch */
+.BranchWrapper {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .FormContainer,
+  .form_control_sub .form_input,
+  .form_input {
+    width: 100%;
+  }
+  .form_label {
+    width: 50%;
+  }
+  .form_control_sub {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .form_control {
+    flex-direction: column;
+    align-items: start;
+  }
+  .form_input input,
+  .form_input textarea,
+  .form_input select {
+    width: 100%;
+  }
+  .form_control_sub .form_label{
+    width: 40%;
+  }
+  .form_control_sub .form_input{
+    width: 50%;
+    align-items: start;
+  }
+  .form_control_sub{
+    width: 50%;
+  }
+  .BranchWrapper{
+    width: 100%;
+  }
+}

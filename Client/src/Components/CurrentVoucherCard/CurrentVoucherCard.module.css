@@ -1,0 +1,21 @@
+.cardImage {
+    width: 50%;
+    padding: 10px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  .Menu_Item_Card {
+    max-width: 100%;
+    display: flex;
+    border: 2px solid #ccc;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .Menu_Item_Card {
+      flex-direction: column;
+    }
+    .cardImage {
+      width: 100%;
+    }
+  }
+  

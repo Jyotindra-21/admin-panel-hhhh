@@ -1,0 +1,35 @@
+.AboutContainer {
+  width: 100%;
+}
+
+.uploadContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form_control {
+  display: flex;
+  flex-direction: column;
+}
+.form_control label {
+  padding: 10px 0;
+}
+.form_filed {
+  width: 80%;
+  border-radius: 5px;
+  font-size: large;
+  padding: 10px;
+}
+.Divider_about{
+  width: 80%;
+}
+
+@media only screen and (max-width: 768px) {
+  .form_filed{
+    width: 100%;
+  }
+  .Divider_about{
+    width: 100%;
+  }
+}

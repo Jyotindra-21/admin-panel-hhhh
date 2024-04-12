@@ -1,0 +1,76 @@
+.CateringContainer {
+  width: 100%;
+}
+.uploadContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.uploadContainer > div {
+  width: 100%;
+}
+
+.uploadContainer > button {
+  margin-right: auto;
+  margin-top: 10px;
+}
+.Add_form {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 80%;
+  /* border: 2px solid black; */
+}
+.Add_form input {
+  width: 70%;
+  font-size: medium;
+  padding: 10px;
+  border-radius: 5px;
+}
+.Add_form button {
+  width: 10%;
+}
+.Terms_Cards {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.Card {
+  border: 2px solid var(--text-lightGray);
+  border-radius: 5px;
+  padding: 10px;
+}
+.Card > input{
+  font-size: 18px;
+  width: 100%;
+  padding: 7px;
+}
+.Card h4 {
+  margin: 0;
+}
+.Card > div {
+  display: flex;
+  justify-content: end;
+}
+
+@media only screen and (max-width: 768px) {
+  .Add_form {
+    width: 100%;
+  }
+  .Terms_Cards {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .Terms_Cards {
+    width: 100%;
+  }
+}
