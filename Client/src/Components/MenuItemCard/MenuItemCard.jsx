@@ -9,6 +9,7 @@ import { deleteFileFromBucket } from "../../helpers/deleteImage";
 import getReqHeaders from "../../helpers/getReqHeaders";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 export default function MenuItemCard({
   img,
@@ -17,9 +18,9 @@ export default function MenuItemCard({
   category,
   id,
   handleMenuItemDelete,
-  
+
 }) {
-  const [loading , setLoading] = React.useState(false)
+  const [loading, setLoading] = React.useState(false)
   const menuItemDeleteHandler = async () => {
     setLoading(true)
     const deleteRes = await axios.delete(
@@ -59,7 +60,8 @@ export default function MenuItemCard({
           Category : {category}
         </Typography>
         <div>
-          <Button
+          <Link to={`/menu/edit-menu-item/${id}`}>
+            <Button
             style={{ marginRight: "5px" }}
             color="primary"
             variant="contained"
@@ -67,17 +69,18 @@ export default function MenuItemCard({
           >
             Edit
           </Button>
-          <Button
-            style={{ marginRight: "5px" }}
-            color="error"
-            variant="contained"
-            onClick={menuItemDeleteHandler}
-            disabled={loading}
-          >
-            Delete
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
+        </Link>
+        <Button
+          style={{ marginRight: "5px" }}
+          color="error"
+          variant="contained"
+          onClick={menuItemDeleteHandler}
+          disabled={loading}
+        >
+          Delete
+        </Button>
+      </div>
+    </CardContent>
+    </Card >
   );
 }

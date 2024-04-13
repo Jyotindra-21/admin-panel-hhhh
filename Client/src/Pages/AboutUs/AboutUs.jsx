@@ -19,19 +19,34 @@ export default function AboutUs() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    (async function () {
-      const res = await axios.get(
-        `${import.meta.env.VITE_BACKEND_API}/view/about`
-      );
-      console.log(res.data);
-      if (res.status !== 200)
-        throw new Error("Failed to fetch about page data");
-      setAboutUsData(res.data);
-      setIntroduction(res.data["introduction"][0]);
-      setHistoryData(res.data["history"]);
-      setMissionData(res.data["mission"][0]);
-      setValues(res.data["values"][0]);
-    })();
+
+    axiosRequest(`${import.meta.env.VITE_BACKEND_API}/view/about`, "get")
+      .then(res => {
+        console.log(res.data);  
+        if (res.status !== 200)
+          throw new Error("Failed to fetch about page data");
+        setAboutUsData(res.data);
+        setIntroduction(res.data["introduction"][0]);
+        setHistoryData(res.data["history"]);
+        setMissionData(res.data["mission"][0]);
+        setValues(res.data["values"][0]);
+      }).catch(error => {
+        console.error('Error:', error);
+      })
+
+    // (async function () {
+    //   const res = await axios.get(
+    //     `${import.meta.env.VITE_BACKEND_API}/view/about`
+    //   );
+    //   console.log(res.data);
+    //   if (res.status !== 200)
+    //     throw new Error("Failed to fetch about page data");
+    //   setAboutUsData(res.data);
+    //   setIntroduction(res.data["introduction"][0]);
+    //   setHistoryData(res.data["history"]);
+    //   setMissionData(res.data["mission"][0]);
+    //   setValues(res.data["values"][0]);
+    // })();
   }, []);
 
   const introductionUpdateHandler = async () => {

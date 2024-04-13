@@ -34,6 +34,7 @@ import EditCateringCourse from "./Pages/CateringCourse/EditCateringCourse";
 import EditPromoTnC from "./Pages/PromoTnC/EditPromoTnC";
 import PrivacyPolicy from "./Pages/Policy/PrivacyPolicy";
 import Newsletter from "./Pages/Newsletter/Newsletter";
+import EditMenuItem from "./Pages/MenuItem/EditMenuItem";
 
 const drawerWidth = 240;
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
@@ -167,6 +168,10 @@ export default function App() {
               <Route
                 path="/promo/edit-promo-tnc/:id"
                 element={<EditPromoTnC />}
+              />
+               <Route
+                path="/menu/edit-menu-item/:id"
+                element={<EditMenuItem />}
               />
             </Routes>
             {/* ROUTES END */}
